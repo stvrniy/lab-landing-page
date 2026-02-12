@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e8eaed;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1a73e8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4a90e2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="500" height="400" fill="url(#bgGrad)"/>
+  
+  <!-- Main device (laptop) -->
+  <rect x="100" y="120" width="300" height="180" rx="10" fill="#202124"/>
+  <rect x="110" y="130" width="280" height="150" rx="5" fill="#fff"/>
+  <rect x="80" y="300" width="340" height="20" rx="5" fill="#5f6368"/>
+  <rect x="200" y="320" width="100" height="8" rx="4" fill="#5f6368"/>
+  
+  <!-- Screen content - code/schedule -->
+  <rect x="120" y="140" width="80" height="10" rx="2" fill="#1a73e8"/>
+  <rect x="120" y="155" width="120" height="6" rx="2" fill="#dadce0"/>
+  <rect x="120" y="165" width="100" height="6" rx="2" fill="#dadce0"/>
+  <rect x="120" y="175" width="110" height="6" rx="2" fill="#dadce0"/>
+  
+  <!-- Chat bubble -->
+  <rect x="320" y="100" width="140" height="80" rx="10" fill="url(#primaryGrad)"/>
+  <polygon points="320,170 300,185 320,180" fill="url(#primaryGrad)"/>
+  <rect x="335" y="115" width="110" height="8" rx="2" fill="#fff"/>
+  <rect x="335" y="130" width="90" height="8" rx="2" fill="#fff" opacity="0.8"/>
+  <rect x="335" y="145" width="100" height="8" rx="2" fill="#fff" opacity="0.6"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="50" cy="80" r="30" fill="#34a853" opacity="0.2"/>
+  <circle cx="450" cy="350" r="40" fill="#fbbc04" opacity="0.2"/>
+  <circle cx="80" cy="350" r="25" fill="#ea4335" opacity="0.2"/>
+  
+  <!-- Icons on screen -->
+  <rect x="220" y="195" width="40" height="40" rx="5" fill="#34a853"/>
+  <rect x="270" y="195" width="40" height="40" rx="5" fill="#fbbc04"/>
+  <rect x="320" y="195" width="40" height="40" rx="5" fill="#ea4335"/>
+  
+  <!-- Floating elements -->
+  <rect x="50" y="180" width="40" height="40" rx="8" fill="#fff" stroke="#dadce0" stroke-width="2"/>
+  <path d="M70 190 L70 210 M60 200 L80 200" stroke="#1a73e8" stroke-width="3" stroke-linecap="round"/>
+  
+  <rect x="410" y="220" width="40" height="40" rx="8" fill="#fff" stroke="#dadce0" stroke-width="2"/>
+  <circle cx="430" cy="235" r="8" fill="none" stroke="#34a853" stroke-width="2"/>
+  <path d="M430 240 L430 248 M425 243 L435 243" stroke="#34a853" stroke-width="2" stroke-linecap="round"/>
+</svg>

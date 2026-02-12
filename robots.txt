@@ -1,0 +1,15 @@
+# Robots.txt for Lab Landing Page
+# https://gnaza.github.io/lab-landing-page/
+
+User-agent: *
+Allow: /
+Allow: /en/
+
+Sitemap: https://gnaza.github.io/lab-landing-page/sitemap.xml
+
+# Disallow private/admin pages
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_/
+Disallow: /*.json$
+Disallow: /*.xml$
