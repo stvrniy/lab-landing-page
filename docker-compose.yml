@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: lab-landing-page
+    ports:
+      - "80:80"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+
+# Development environment
+  dev:
+    image: python:3.11-slim
+    container_name: lab-landing-page-dev
+    command: python -m http.server 8080
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+    working_dir: /app
+
+# Production environment with nginx
+  prod:
+    build: .
+    container_name: lab-landing-page-prod
+    ports:
+      - "443:80"
+    environment:
+      - NGINX_HOST=localhost
+    volumes:
+      - ./ssl:/etc/nginx/ssl:ro
